@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/fon">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:background="@color/fon"
+        >
+
+        <Button
+            android:id="@+id/buttonk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="300dp"
+            android:onClick="onClick"
+            android:text="игра в кости"
+            android:backgroundTint="@color/knop"
+            />
+
+        <Button
+            android:id="@+id/buttonch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="300dp"
+            android:onClick="onClick"
+            android:layout_gravity="center"
+            android:text="угадай число"
+            android:backgroundTint="@color/knop"/>
+
+        <Button
+            android:id="@+id/buttonma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="300dp"
+            android:onClick="onClick"
+            android:layout_gravity="center"
+            android:text="Математика"
+            android:backgroundTint="@color/knop"/>
+
+
+    </LinearLayout> </RelativeLayout>
