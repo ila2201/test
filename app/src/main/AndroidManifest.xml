@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proekt">
         <activity
+            android:name=".minus"
+            android:exported="false" />
+        <activity
+            android:name=".plus"
+            android:exported="false" />
+        <activity
             android:name=".chislo"
             android:exported="false" />
         <activity

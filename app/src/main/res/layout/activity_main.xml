@@ -11,6 +11,25 @@
         android:orientation="vertical"
         android:background="@color/fon"
         >
+        <TextView
+            android:id="@+id/glav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ГЛАВНОЕ МЕНЮ"
+            android:textSize="50dp"
+            android:textColor="@color/text"
+            />
+
+        <TextView
+            android:id="@+id/glav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="50dp"
+            android:textColor="@color/text"
+            android:textStyle="bold"
+            android:singleLine="true"
+            />
 
         <Button
             android:id="@+id/buttonk"
@@ -18,9 +37,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:width="300dp"
+            android:height="90dp"
+            android:textSize="28dp"
             android:onClick="onClick"
             android:text="игра в кости"
             android:backgroundTint="@color/knop"
+            android:textStyle="bold"
             />
 
         <Button
@@ -28,20 +50,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:width="300dp"
+            android:height="90dp"
+            android:textSize="28dp"
             android:onClick="onClick"
             android:layout_gravity="center"
             android:text="угадай число"
-            android:backgroundTint="@color/knop"/>
+            android:backgroundTint="@color/knop"
+            android:textStyle="bold"
+            />
 
         <Button
             android:id="@+id/buttonma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:width="300dp"
+            android:height="90dp"
+            android:textSize="28dp"
             android:onClick="onClick"
             android:layout_gravity="center"
-            android:text="Математика"
-            android:backgroundTint="@color/knop"/>
+            android:text="Примеры"
+            android:backgroundTint="@color/knop"
+            android:textStyle="bold"
+            />
 
 
     </LinearLayout> </RelativeLayout>

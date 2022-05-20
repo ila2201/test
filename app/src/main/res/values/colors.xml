@@ -9,5 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="knop">#0000FF</color>
     <color name="fon">#FF03DAFF</color>
+    <color name="fonplay">#5793d4</color>
     <color name="primer">#5F54FF</color>
+    <color name="exit">#FF0000</color>
+    <color name="knopi">#00FF00</color>
+    <color name="text">#fffb00</color>
+    <color name="textp">#ff5500</color>
+
 </resources>
