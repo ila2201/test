@@ -19,13 +19,13 @@
             android:textSize="40dp"
             android:textColor="@color/text"
             android:textStyle="bold"
-            android:singleLine="true"/>
+            />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="--------------------------------------------"
+            android:text=""
             />
 
         <Button
@@ -42,6 +42,50 @@
             android:textSize="20sp"
             android:textStyle="bold"
             />
+
+        <Button
+            android:id="@+id/pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="350dp"
+            android:height="80dp"
+            android:backgroundTint="@color/knopi"
+            android:onClick="onClick"
+            android:text="1-10"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <Button
+            android:id="@+id/pn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="350dp"
+            android:height="80dp"
+            android:backgroundTint="@color/knopi"
+            android:onClick="onClick"
+            android:text="10-100"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <Button
+            android:id="@+id/ps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="350dp"
+            android:height="80dp"
+            android:backgroundTint="@color/knopi"
+            android:onClick="onClick"
+            android:text="100-1000"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
 
         <Button
             android:id="@+id/minus"

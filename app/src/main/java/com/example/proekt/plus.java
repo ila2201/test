@@ -19,11 +19,12 @@ public class plus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plus);
         Random r = new Random();
-        int i = r.nextInt(45 - 28)+28;
-        int i1 = r.nextInt(45 - 28) + 28;
+        int i = r.nextInt(90)+10;
+        int i1 = r.nextInt(90) +10;
         int ot = i+i1;
 
         TextView tv = (TextView) findViewById(R.id.prim);
+        TextView tim = (TextView) findViewById(R.id.time);
         tv.setText(String.format("%s %s %s", i, a, i1));
         Button v1 = (Button) findViewById(R.id.v1);
         Button v2 = (Button) findViewById(R.id.v2);
@@ -31,6 +32,7 @@ public class plus extends AppCompatActivity {
         Button v4 = (Button) findViewById(R.id.v4);
         Button re = (Button) findViewById(R.id.re);
         re.setVisibility(View.GONE);
+
         int k = r.nextInt(4)+1;
         int va1 = 0;
         int va2 = 0;
@@ -146,6 +148,10 @@ public class plus extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        int t = 10;
+        tim.setText(String.format("%s",t));
+        while (t > 0) {
+            t--;
+            tim.setText(String.format("%s",t)); }
     }
 }
