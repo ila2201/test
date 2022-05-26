@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class math extends AppCompatActivity {
-
+    public static int bal = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +31,6 @@ public class math extends AppCompatActivity {
         Button exit = (Button)findViewById(R.id.exit);
         exit.setVisibility(View.VISIBLE);
         TextView reg = (TextView) findViewById(R.id.glav);
-
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

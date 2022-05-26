@@ -18,12 +18,24 @@
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="---"
         android:textSize="40dp"
         android:textColor="@color/exit"
         android:textStyle="bold"
         android:singleLine="true"
         android:gravity="top"
+        />
+    <TextView
+        android:id="@+id/bal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="FFFFFFFFFFFF"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/igra"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:gravity="bottom"
         />
 
     <LinearLayout
@@ -114,22 +126,6 @@
             android:textSize="20sp"
             android:textStyle="bold"
             />
-        <Button
-            android:id="@+id/re"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:width="300dp"
-            android:height="80dp"
-            android:backgroundTint="@color/knopi"
-            android:onClick="onClick"
-            android:text="Заново"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            />
 
     </LinearLayout>
-
-
 </RelativeLayout>
