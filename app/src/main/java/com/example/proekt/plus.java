@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -15,16 +15,20 @@ public class plus extends AppCompatActivity {
     String a = " + ";
     String b = " = ";
     String c = "Решено: ";
+    private Chronometer chronometerCountDown;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plus);
+        this.chronometerCountDown = (Chronometer) findViewById(R.id.time);
+        this.chronometerCountDown.setText(math.time + "");
         Random r = new Random();
+        this.chronometerCountDown.start();
         int i = r.nextInt(90)+10;
         int i1 = r.nextInt(90) +10;
         int ot = i+i1;
         TextView tv = (TextView) findViewById(R.id.prim);
-        TextView time = (TextView) findViewById(R.id.time);
         TextView tim = (TextView) findViewById(R.id.bal);
         tv.setText(String.format("%s %s %s", i, a, i1));
         Button v1 = (Button) findViewById(R.id.v1);
@@ -160,10 +164,22 @@ public class plus extends AppCompatActivity {
             }
         });
 
-       // int t = 10;
-       // tim.setText(String.format("%s",t));
-       // while (t > 0) {
-       //     t--;
-        //    tim.setText(String.format("%s",t)); }
+        this.chronometerCountDown.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+            @Override
+            public void onChronometerTick(Chronometer chronometer) {
+                onChronometerTickHandler();
+            }
+        });
     }
+    public void onChronometerTickHandler()  {
+        if(math.time < 1) {
+            Intent i;
+            i = new Intent(getApplicationContext(), plusitog.class);
+            startActivity(i);
+        }
+        this.chronometerCountDown.setText(math.time + "");
+        math.time--;
+    }
+
+
 }

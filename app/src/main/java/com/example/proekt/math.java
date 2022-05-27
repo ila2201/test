@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class math extends AppCompatActivity {
     public static int bal = 0;
+    public static int time = 20;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
