@@ -32,7 +32,7 @@
             android:id="@+id/resh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Приимеров:"
+            android:text="Примеров:"
             android:textSize="40dp"
             android:textColor="@color/knopi"
             android:textStyle="bold"
