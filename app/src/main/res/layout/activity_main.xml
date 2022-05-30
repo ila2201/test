@@ -17,11 +17,12 @@
             android:layout_height="wrap_content"
             android:text="ГЛАВНОЕ МЕНЮ"
             android:textSize="50dp"
+            android:singleLine="true"
             android:textColor="@color/text"
             />
 
         <TextView
-            android:id="@+id/glav"
+            android:id="@+id/glav0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
@@ -29,20 +30,6 @@
             android:textColor="@color/text"
             android:textStyle="bold"
             android:singleLine="true"
-            />
-
-        <Button
-            android:id="@+id/buttonk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:width="300dp"
-            android:height="90dp"
-            android:textSize="28dp"
-            android:onClick="onClick"
-            android:text="игра в кости"
-            android:backgroundTint="@color/knop"
-            android:textStyle="bold"
             />
 
         <Button
@@ -54,7 +41,7 @@
             android:textSize="28dp"
             android:onClick="onClick"
             android:layout_gravity="center"
-            android:text="угадай число"
+            android:text="Калькулятор"
             android:backgroundTint="@color/knop"
             android:textStyle="bold"
             />

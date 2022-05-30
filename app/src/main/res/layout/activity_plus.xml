@@ -3,12 +3,19 @@
     android:layout_height="fill_parent"
     android:background="@color/fonplay"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:background="@color/fonplay"
+        >
     <TextView
         android:id="@+id/glav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Сложение"
-        android:textSize="40dp"
+        android:textSize="50dp"
         android:layout_centerHorizontal="true"
         android:textColor="@color/text"
         android:textStyle="bold"
@@ -17,31 +24,30 @@
         />
     <Chronometer
         android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:countDown="true"
         android:gravity="center_horizontal"
-        android:textSize="60sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/exit"/>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/bal"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="FFFFFFFFFFFF"
-        android:textSize="40dp"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/igra"
-        android:textStyle="bold"
-        android:singleLine="true"
         android:gravity="bottom"
-        />
+        android:singleLine="true"
+        android:text="FFFFFFFFFFFF"
+        android:textColor="@color/igra"
+        android:textSize="40dp"
+        android:layout_margin="50dp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"

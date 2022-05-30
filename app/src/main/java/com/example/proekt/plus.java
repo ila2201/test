@@ -15,6 +15,7 @@ public class plus extends AppCompatActivity {
     String a = " + ";
     String b = " = ";
     String c = "Решено: ";
+    String d = "Время: ";
     private Chronometer chronometerCountDown;
 
     @Override
@@ -22,7 +23,6 @@ public class plus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plus);
         this.chronometerCountDown = (Chronometer) findViewById(R.id.time);
-        this.chronometerCountDown.setText(math.time + "");
         Random r = new Random();
         this.chronometerCountDown.start();
         int i = r.nextInt(90)+10;
@@ -81,6 +81,7 @@ public class plus extends AppCompatActivity {
                 }
                 else{
                     gl.setText("ОШИБКА!");
+                    math.resho=math.resho+1;
                 }
                 gl.setTextSize(59);
                 tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
@@ -104,6 +105,7 @@ public class plus extends AppCompatActivity {
                 }
                 else{
                     gl.setText("ОШИБКА!");
+                    math.resho=math.resho+1;
                 }
                 gl.setTextSize(59);
                 tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
@@ -127,6 +129,7 @@ public class plus extends AppCompatActivity {
                 }
                 else{
                     gl.setText("ОШИБКА!");
+                    math.resho=math.resho+1;
                 }
                 gl.setTextSize(59);
                 tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
@@ -150,6 +153,7 @@ public class plus extends AppCompatActivity {
                 }
                 else{
                     gl.setText("ОШИБКА!");
+                    math.resho=math.resho+1;
                 }
                 gl.setTextSize(59);
                 tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
@@ -177,7 +181,7 @@ public class plus extends AppCompatActivity {
             i = new Intent(getApplicationContext(), plusitog.class);
             startActivity(i);
         }
-        this.chronometerCountDown.setText(math.time + "");
+        this.chronometerCountDown.setText(String.format("%s %s",d,math.time));
         math.time--;
     }
 

@@ -10,6 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proekt">
         <activity
+            android:name=".koren"
+            android:exported="false" />
+        <activity
+            android:name=".dels"
+            android:exported="false" />
+        <activity
+            android:name=".del"
+            android:exported="false" />
+        <activity
+            android:name=".proisvst"
+            android:exported="false" />
+        <activity
+            android:name=".proisvs"
+            android:exported="false" />
+        <activity
+            android:name=".proisv"
+            android:exported="false" />
+        <activity
+            android:name=".minuss"
+            android:exported="false" />
+        <activity
+            android:name=".pluss"
+            android:exported="false" />
+        <activity
             android:name=".plusitog"
             android:exported="false" />
         <activity
@@ -23,12 +47,6 @@
             android:exported="false" />
         <activity
             android:name=".math"
-            android:exported="false" />
-        <activity
-            android:name=".kosti"
-            android:exported="false" />
-        <activity
-            android:name=".main"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

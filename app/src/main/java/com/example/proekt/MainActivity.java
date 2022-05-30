@@ -18,15 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main);
 
-        Button buttonk = (Button)findViewById(R.id.buttonk);
-        buttonk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i;
-                i = new Intent(getApplicationContext(), kosti.class);
-                startActivity(i);
-            }
-        });
         Button buttonch = (Button)findViewById(R.id.buttonch);
         buttonch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
             }
         });
-
     }
 
     @Override

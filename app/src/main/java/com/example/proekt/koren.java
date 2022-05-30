@@ -11,34 +11,28 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class minus extends AppCompatActivity {
-    String a = " - ";
+public class koren extends AppCompatActivity {
+    String a = " √ ";
     String b = " = ";
     String c = "Решено: ";
     String d = "Время: ";
-    Random r = new Random();
-    int i = r.nextInt(90)+10;
-    int i1 = r.nextInt(90) +10;
-
     private Chronometer chronometerCountDown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_minus);
+        setContentView(R.layout.activity_plus);
+        TextView gla = (TextView) findViewById(R.id.glav);
+        gla.setText("Деление");
         this.chronometerCountDown = (Chronometer) findViewById(R.id.time);
         Random r = new Random();
         this.chronometerCountDown.start();
-
-        int del = i1;
-        if (i1>i){
-            i1 = i;
-            i = del;
-        }
-        int ot = i-i1;
+        int i = r.nextInt(90)+2;
+        int i2 = i*i;
+        int ot = i;
         TextView tv = (TextView) findViewById(R.id.prim);
         TextView tim = (TextView) findViewById(R.id.bal);
-        tv.setText(String.format("%s %s %s", i, a, i1));
+        tv.setText(String.format("%s %s", a, i2));
         Button v1 = (Button) findViewById(R.id.v1);
         Button v2 = (Button) findViewById(R.id.v2);
         Button v3 = (Button) findViewById(R.id.v3);
@@ -50,28 +44,28 @@ public class minus extends AppCompatActivity {
         int va3 = 0;
         int va4 = 0;
         if (k == 1){
-            va1=i-i1;
-            va2=i-i1-5;
-            va3=i-i1+3;
-            va4=i-i1-2;
+            va1=ot;
+            va2=ot+53;
+            va3=ot-8;
+            va4=ot+26;
         }
         if (k == 2){
-            va1=i-i1-3;
-            va2=i-i1;
-            va3=i-i1+2;
-            va4=i-i1+4;
+            va1=ot-1;
+            va2=ot;
+            va3=ot+24;
+            va4=ot-7;
         }
         if (k == 3){
-            va1=i-i1+3;
-            va2=i-i1-2;
-            va3=i-i1;
-            va4=i-i1+5;
+            va1=ot+30;
+            va2=ot-9;
+            va3=ot;
+            va4=ot+55;
         }
         if (k == 4){
-            va1=i-i1-3;
-            va2=i-i1-5;
-            va3=i-i1+2;
-            va4=i-i1;
+            va1=ot+32;
+            va2=ot+52;
+            va3=ot-8;
+            va4=ot;
         }
         v1.setText(Integer.toString(va1));
         v2.setText(Integer.toString(va2));
@@ -92,13 +86,13 @@ public class minus extends AppCompatActivity {
                     math.resho=math.resho+1;
                 }
                 gl.setTextSize(59);
-                tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
+                tv.setText(String.format("%s %s %s %s", a, i2, b, ot));
                 v1.setVisibility(View.GONE);
                 v2.setVisibility(View.GONE);
                 v3.setVisibility(View.GONE);
                 v4.setVisibility(View.GONE);
                 Intent i;
-                i = new Intent(getApplicationContext(), minus.class);
+                i = new Intent(getApplicationContext(), koren.class);
                 startActivity(i);
             }
         });
@@ -116,13 +110,13 @@ public class minus extends AppCompatActivity {
                     math.resho=math.resho+1;
                 }
                 gl.setTextSize(59);
-                tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
+                tv.setText(String.format("%s %s %s %s", a, i2, b, ot));
                 v1.setVisibility(View.GONE);
                 v2.setVisibility(View.GONE);
                 v3.setVisibility(View.GONE);
                 v4.setVisibility(View.GONE);
                 Intent i;
-                i = new Intent(getApplicationContext(), minus.class);
+                i = new Intent(getApplicationContext(), koren.class);
                 startActivity(i);
             }
         });
@@ -140,13 +134,13 @@ public class minus extends AppCompatActivity {
                     math.resho=math.resho+1;
                 }
                 gl.setTextSize(59);
-                tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
+                tv.setText(String.format("%s %s %s %s", a, i2, b, ot));
                 v1.setVisibility(View.GONE);
                 v2.setVisibility(View.GONE);
                 v3.setVisibility(View.GONE);
                 v4.setVisibility(View.GONE);
                 Intent i;
-                i = new Intent(getApplicationContext(), minus.class);
+                i = new Intent(getApplicationContext(), koren.class);
                 startActivity(i);
             }
         });
@@ -164,13 +158,13 @@ public class minus extends AppCompatActivity {
                     math.resho=math.resho+1;
                 }
                 gl.setTextSize(59);
-                tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
+                tv.setText(String.format("%s %s %s %s", a, i2, b, ot));
                 v1.setVisibility(View.GONE);
                 v2.setVisibility(View.GONE);
                 v3.setVisibility(View.GONE);
                 v4.setVisibility(View.GONE);
                 Intent i;
-                i = new Intent(getApplicationContext(), minus.class);
+                i = new Intent(getApplicationContext(), koren.class);
                 startActivity(i);
 
             }

@@ -11,14 +11,14 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class minus extends AppCompatActivity {
+public class minuss extends AppCompatActivity {
     String a = " - ";
     String b = " = ";
     String c = "Решено: ";
     String d = "Время: ";
     Random r = new Random();
-    int i = r.nextInt(90)+10;
-    int i1 = r.nextInt(90) +10;
+    int i = r.nextInt(900)+100;
+    int i1 = r.nextInt(900) +100;
 
     private Chronometer chronometerCountDown;
 
@@ -98,7 +98,7 @@ public class minus extends AppCompatActivity {
                 v3.setVisibility(View.GONE);
                 v4.setVisibility(View.GONE);
                 Intent i;
-                i = new Intent(getApplicationContext(), minus.class);
+                i = new Intent(getApplicationContext(), minuss.class);
                 startActivity(i);
             }
         });
@@ -122,7 +122,7 @@ public class minus extends AppCompatActivity {
                 v3.setVisibility(View.GONE);
                 v4.setVisibility(View.GONE);
                 Intent i;
-                i = new Intent(getApplicationContext(), minus.class);
+                i = new Intent(getApplicationContext(), minuss.class);
                 startActivity(i);
             }
         });
@@ -146,7 +146,7 @@ public class minus extends AppCompatActivity {
                 v3.setVisibility(View.GONE);
                 v4.setVisibility(View.GONE);
                 Intent i;
-                i = new Intent(getApplicationContext(), minus.class);
+                i = new Intent(getApplicationContext(), minuss.class);
                 startActivity(i);
             }
         });
@@ -170,7 +170,7 @@ public class minus extends AppCompatActivity {
                 v3.setVisibility(View.GONE);
                 v4.setVisibility(View.GONE);
                 Intent i;
-                i = new Intent(getApplicationContext(), minus.class);
+                i = new Intent(getApplicationContext(), minuss.class);
                 startActivity(i);
 
             }

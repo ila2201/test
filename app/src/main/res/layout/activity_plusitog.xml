@@ -32,13 +32,41 @@
             android:id="@+id/resh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Примеров:"
+            android:text="Решено:"
             android:textSize="40dp"
-            android:textColor="@color/knopi"
+            android:textColor="@color/igra"
             android:textStyle="bold"
             />
         <TextView
             android:id="@+id/prim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="40dp"
+            android:textColor="@color/igra"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/resho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ошибки:"
+            android:textSize="40dp"
+            android:textColor="@color/exit"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/oshibki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="40dp"
+            android:textColor="@color/exit"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/per"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
