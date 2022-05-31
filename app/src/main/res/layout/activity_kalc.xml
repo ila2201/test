@@ -64,23 +64,22 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical"
+        android:layout_centerInParent="true"
         android:background="@color/fonplay"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/prim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="40dp"
-            android:textColor="@color/textp"
-            android:textStyle="bold"
-            android:singleLine="true"
-            android:gravity="top"
             android:layout_centerHorizontal="true"
-            />
+            android:gravity="top"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/textp"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/v1"
             android:layout_width="wrap_content"
@@ -93,8 +92,8 @@
             android:text="СЛОЖЕНИЕ"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/v2"
             android:layout_width="wrap_content"
@@ -107,8 +106,8 @@
             android:text="СЛОЖЕНИЕ"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/v3"
             android:layout_width="wrap_content"
@@ -121,8 +120,8 @@
             android:text="СЛОЖЕНИЕ"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/v4"
             android:layout_width="wrap_content"
@@ -135,8 +134,7 @@
             android:text="СЛОЖЕНИЕ"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 </RelativeLayout>
