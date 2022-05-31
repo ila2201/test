@@ -41,11 +41,23 @@
             android:textSize="28dp"
             android:onClick="onClick"
             android:layout_gravity="center"
+            android:text="Тайм"
+            android:backgroundTint="@color/knop"
+            android:textStyle="bold"
+            />
+        <Button
+            android:id="@+id/buttonk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="300dp"
+            android:height="90dp"
+            android:textSize="28dp"
+            android:onClick="onClick"
+            android:layout_gravity="center"
             android:text="Калькулятор"
             android:backgroundTint="@color/knop"
             android:textStyle="bold"
             />
-
         <Button
             android:id="@+id/buttonma"
             android:layout_width="wrap_content"

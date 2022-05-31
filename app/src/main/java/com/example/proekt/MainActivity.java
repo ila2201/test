@@ -36,6 +36,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
             }
         });
+        Button lalc = (Button)findViewById(R.id.buttonk);
+        lalc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i;
+                i = new Intent(getApplicationContext(), kalc.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
