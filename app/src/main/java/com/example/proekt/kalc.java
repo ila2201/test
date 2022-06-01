@@ -13,9 +13,10 @@ import java.util.Random;
 
 public class kalc extends AppCompatActivity {
     String a = "Ходов: ";
-    String b = "Цель: ";
+    String ba = "Цель: ";
     String c = "Решено: ";
     String v = "Победа!";
+    String za = "Попробуйте ещё раз";
     int o = 0;
     int ho = 0;
     int d = 0;
@@ -57,6 +58,10 @@ public class kalc extends AppCompatActivity {
         Button v2 = (Button) findViewById(R.id.v2);
         Button v3 = (Button) findViewById(R.id.v3);
         Button v4 = (Button) findViewById(R.id.v4);
+        Button re = (Button) findViewById(R.id.rest);
+        Button pe = (Button) findViewById(R.id.pop);
+        pe.setVisibility(View.GONE);
+        re.setVisibility(View.GONE);
         q1 = r.nextInt(9)+1;
         q2 = r.nextInt(9)+1;
         q3 = r.nextInt(9)+1;
@@ -121,6 +126,11 @@ public class kalc extends AppCompatActivity {
                 o=o*q4;
             }
             h-=1;
+        }
+        if (o==0){
+            Intent i;
+            i = new Intent(getApplicationContext(), kalc.class);
+            startActivity(i);
         }
         if (math.check == 0){
             math.check = 1;
@@ -207,7 +217,7 @@ public class kalc extends AppCompatActivity {
             v4.setText(String.format("%s %s",vc4,q4));
         }
         hod.setText(String.format("%s %s", a, ho));
-        chel.setText(String.format("%s %s", b, ot));
+        chel.setText(String.format("%s %s", ba, ot));
         tek.setText(String.format("%s",o));
         int c11 = c1;
         int c22 = c2;
@@ -235,39 +245,20 @@ public class kalc extends AppCompatActivity {
                     hod.setText(String.format("%s", v));
                     math.check=0;
                     math.bal=math.bal+1;
-
+                    v1.setVisibility(View.GONE);
+                    v2.setVisibility(View.GONE);
+                    v3.setVisibility(View.GONE);
+                    v4.setVisibility(View.GONE);
+                    re.setVisibility(View.VISIBLE);
+                    b.setText(String.format("%s %s",c,math.bal));
                 }
                 if (ho<1  && o!=ot){
-                        o = math.z;
-                        ot = math.chel;
-                        ho = math.hod;
-                        d=math.d;
-                        if (d == 2){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                        }
-                        if (d == 3){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            q3 = math.b3;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                            c3 = math.z3;
-                        }
-                        if (d == 4){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            q3 = math.b3;
-                            q4 = math.b4;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                            c3 = math.z3;
-                            c4 = math.z4;
-                        }
-                    hod.setText(String.format("%s %s", a, ho));
-                    tek.setText(String.format("%s",o));
+                    pe.setVisibility(View.VISIBLE);
+                    v1.setVisibility(View.GONE);
+                    v2.setVisibility(View.GONE);
+                    v3.setVisibility(View.GONE);
+                    v4.setVisibility(View.GONE);
+                    hod.setText(String.format("%s", za));
 
                 }
             }
@@ -293,38 +284,21 @@ public class kalc extends AppCompatActivity {
                 if (o==ot){
                     hod.setText(String.format("%s", v));
                     math.check = 0;
+                    math.bal=math.bal+1;
+                    v1.setVisibility(View.GONE);
+                    v2.setVisibility(View.GONE);
+                    v3.setVisibility(View.GONE);
+                    v4.setVisibility(View.GONE);
+                    re.setVisibility(View.VISIBLE);
+                    b.setText(String.format("%s %s",c,math.bal));
                 }
                 if (ho<1  && o!=ot){
-                        o = math.z;
-                        ot = math.chel;
-                        ho = math.hod;
-                        d=math.d;
-                        if (d == 2){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                        }
-                        if (d == 3){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            q3 = math.b3;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                            c3 = math.z3;
-                        }
-                        if (d == 4){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            q3 = math.b3;
-                            q4 = math.b4;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                            c3 = math.z3;
-                            c4 = math.z4;
-                        }
-                    hod.setText(String.format("%s %s", a, ho));
-                    tek.setText(String.format("%s",o));
+                    pe.setVisibility(View.VISIBLE);
+                    v1.setVisibility(View.GONE);
+                    v2.setVisibility(View.GONE);
+                    v3.setVisibility(View.GONE);
+                    v4.setVisibility(View.GONE);
+                    hod.setText(String.format("%s", za));
 
                 }
             }
@@ -350,38 +324,21 @@ public class kalc extends AppCompatActivity {
                 if (o==ot){
                     hod.setText(String.format("%s", v));
                     math.check=0;
+                    math.bal=math.bal+1;
+                    v1.setVisibility(View.GONE);
+                    v2.setVisibility(View.GONE);
+                    v3.setVisibility(View.GONE);
+                    v4.setVisibility(View.GONE);
+                    re.setVisibility(View.VISIBLE);
+                    b.setText(String.format("%s %s",c,math.bal));
                 }
                 if (ho<1  && o!=ot){
-                        o = math.z;
-                        ot = math.chel;
-                        ho = math.hod;
-                        d=math.d;
-                        if (d == 2){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                        }
-                        if (d == 3){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            q3 = math.b3;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                            c3 = math.z3;
-                        }
-                        if (d == 4){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            q3 = math.b3;
-                            q4 = math.b4;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                            c3 = math.z3;
-                            c4 = math.z4;
-                        }
-                    hod.setText(String.format("%s %s", a, ho));
-                    tek.setText(String.format("%s",o));
+                    pe.setVisibility(View.VISIBLE);
+                    v1.setVisibility(View.GONE);
+                    v2.setVisibility(View.GONE);
+                    v3.setVisibility(View.GONE);
+                    v4.setVisibility(View.GONE);
+                    hod.setText(String.format("%s", za));
 
                 }
             }
@@ -407,40 +364,77 @@ public class kalc extends AppCompatActivity {
                 if (o==ot){
                     hod.setText(String.format("%s", v));
                     math.check=0;
+                    math.bal=math.bal+1;
+                    v1.setVisibility(View.GONE);
+                    v2.setVisibility(View.GONE);
+                    v3.setVisibility(View.GONE);
+                    v4.setVisibility(View.GONE);
+                    re.setVisibility(View.VISIBLE);
+                    b.setText(String.format("%s %s",c,math.bal));
                 }
                 if (ho<1 && o!=ot){
-                        o = math.z;
-                        ot = math.chel;
-                        ho = math.hod;
-                        d=math.d;
-                        if (d == 2){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                        }
-                        if (d == 3){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            q3 = math.b3;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                            c3 = math.z3;
-                        }
-                        if (d == 4){
-                            q1 = math.b1;
-                            q2 = math.b2;
-                            q3 = math.b3;
-                            q4 = math.b4;
-                            c1 = math.z1;
-                            c2 = math.z2;
-                            c3 = math.z3;
-                            c4 = math.z4;
-                        }
-                    hod.setText(String.format("%s %s", a, ho));
-                    tek.setText(String.format("%s",o));
-
+                    pe.setVisibility(View.VISIBLE);
+                    v1.setVisibility(View.GONE);
+                    v2.setVisibility(View.GONE);
+                    v3.setVisibility(View.GONE);
+                    v4.setVisibility(View.GONE);
+                    hod.setText(String.format("%s", za));
                 }
+            }
+        });
+        re.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i;
+                i = new Intent(getApplicationContext(), kalc.class);
+                startActivity(i);
+            }
+        });
+
+        pe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                o = math.z;
+                ot = math.chel;
+                ho = math.hod;
+                d=math.d;
+                pe.setVisibility(View.GONE);
+                if (d == 2){
+                    q1 = math.b1;
+                    q2 = math.b2;
+                    c1 = math.z1;
+                    c2 = math.z2;
+                    v1.setVisibility(View.VISIBLE);
+                    v2.setVisibility(View.VISIBLE);
+                }
+                if (d == 3){
+                    q1 = math.b1;
+                    q2 = math.b2;
+                    q3 = math.b3;
+                    c1 = math.z1;
+                    c2 = math.z2;
+                    c3 = math.z3;
+                    v1.setVisibility(View.VISIBLE);
+                    v2.setVisibility(View.VISIBLE);
+                    v3.setVisibility(View.VISIBLE);
+                }
+                if (d == 4){
+                    q1 = math.b1;
+                    q2 = math.b2;
+                    q3 = math.b3;
+                    q4 = math.b4;
+                    c1 = math.z1;
+                    c2 = math.z2;
+                    c3 = math.z3;
+                    c4 = math.z4;
+                    v1.setVisibility(View.VISIBLE);
+                    v2.setVisibility(View.VISIBLE);
+                    v3.setVisibility(View.VISIBLE);
+                    v4.setVisibility(View.VISIBLE);
+                }
+                hod.setText(String.format("%s %s", a, ho));
+                tek.setText(String.format("%s",o));
+
             }
         });
 
