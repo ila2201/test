@@ -10,18 +10,19 @@
         android:orientation="vertical"
         android:background="@color/fonplay"
         >
-        <TextView
-            android:id="@+id/glav"
+        <Button
+            android:id="@+id/exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Калькулятор"
-            android:textSize="50dp"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/text"
-            android:textStyle="bold"
-            android:singleLine="true"
-            android:gravity="top"
-            />
+            android:layout_gravity="center"
+            android:width="300dp"
+            android:height="40dp"
+            android:backgroundTint="@color/exit"
+            android:onClick="onClick"
+            android:text="Стоп"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/hod"
             android:layout_width="wrap_content"
