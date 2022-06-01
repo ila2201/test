@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.sql.DataTruncation;
 import java.util.Random;
 
 public class kalc extends AppCompatActivity {
@@ -53,13 +53,15 @@ public class kalc extends AppCompatActivity {
         TextView chel = (TextView) findViewById(R.id.chel);
         TextView tek = (TextView) findViewById(R.id.prim);
         TextView b = (TextView) findViewById(R.id.bal);
-        b.setText(String.format("%s %s",c,math.bal));
+        b.setText(String.format("%s %s",c, Matematika.bal));
         Button v1 = (Button) findViewById(R.id.v1);
         Button v2 = (Button) findViewById(R.id.v2);
         Button v3 = (Button) findViewById(R.id.v3);
         Button v4 = (Button) findViewById(R.id.v4);
         Button re = (Button) findViewById(R.id.rest);
         Button pe = (Button) findViewById(R.id.pop);
+        Button otvet = (Button) findViewById(R.id.otvet);
+        otvet.setVisibility(View.GONE);
         pe.setVisibility(View.GONE);
         re.setVisibility(View.GONE);
         q1 = r.nextInt(9)+1;
@@ -79,121 +81,104 @@ public class kalc extends AppCompatActivity {
             }
             if (c1 == 1 && e ==1){
                 o=o-q1;
+                Matematika.log= Matematika.log + "+" + String.format("%s",q1);
             }
             if (c1 == 2 && e ==1){
                 o=o+q1;
+                Matematika.log= Matematika.log + "-" + String.format("%s",q1);
             }
             if (c1 == 3 && e ==1){
                 o=o/q1;
+                Matematika.log= Matematika.log + "*" + String.format("%s",q1);
             }
             if (c1 == 4 && e ==1){
                 o=o*q1;
+                Matematika.log= Matematika.log + "/" + String.format("%s",q1);
             }
             if (c2 == 1 && e ==2){
                 o=o-q2;
+                Matematika.log= Matematika.log + "+" + String.format("%s",q2);
             }
             if (c2 == 2 && e ==2){
                 o=o+q2;
+                Matematika.log= Matematika.log + "-" + String.format("%s",q2);
             }
             if (c2 == 3 && e ==2){
                 o=o/q2;
+                Matematika.log= Matematika.log + "*" + String.format("%s",q2);
             }
             if (c2 == 4 && e ==2){
                 o=o*q2;
+                Matematika.log= Matematika.log + "/" + String.format("%s",q2);
             }
             if (c3 == 1 && e ==3){
                 o=o-q3;
+                Matematika.log= Matematika.log + "+" + String.format("%s",q3);
             }
             if (c3 == 2 && e ==3){
                 o=o+q3;
+                Matematika.log= Matematika.log + "-" + String.format("%s",q3);
             }
             if (c3 == 3 && e ==3){
                 o=o/q3;
+                Matematika.log= Matematika.log + "*" + String.format("%s",q3);
             }
             if (c3 == 4 && e ==3){
                 o=o*q3;
+                Matematika.log= Matematika.log + "/" + String.format("%s",q3);
             }
             if (c4 == 1 && e ==4){
                 o=o-q4;
+                Matematika.log= Matematika.log + "+" + String.format("%s",q4);
             }
             if (c4 == 2 && e ==4){
                 o=o+q4;
+                Matematika.log= Matematika.log + "-" + String.format("%s",q4);
             }
             if (c4 == 3 && e ==4){
                 o=o/q4;
+                Matematika.log= Matematika.log + "*" + String.format("%s",q4);
             }
             if (c4 == 4 && e ==4){
                 o=o*q4;
+                Matematika.log= Matematika.log + "/" + String.format("%s",q4);
             }
             h-=1;
         }
-        if (o==0){
+        if (o==0 || o==ot){
+            Matematika.log = "";
             Intent i;
             i = new Intent(getApplicationContext(), kalc.class);
             startActivity(i);
         }
-        if (math.check == 0){
-            math.check = 1;
-            math.z = o;
-            math.chel = ot;
-            math.hod = ho;
-            math.d = d;
+            Matematika.z = o;
+            Matematika.chel = ot;
+            Matematika.hod = ho;
+            Matematika.d = d;
             if (d == 2){
-                math.b1 = q1;
-                math.b2 = q2;
-                math.z1 = c1;
-                math.z2 = c2;
+                Matematika.b1 = q1;
+                Matematika.b2 = q2;
+                Matematika.z1 = c1;
+                Matematika.z2 = c2;
             }
             if (d == 3){
-                math.b1 = q1;
-                math.b2 = q2;
-                math.b3 = q3;
-                math.z1 = c1;
-                math.z2 = c2;
-                math.z3 = c3;
+                Matematika.b1 = q1;
+                Matematika.b2 = q2;
+                Matematika.b3 = q3;
+                Matematika.z1 = c1;
+                Matematika.z2 = c2;
+                Matematika.z3 = c3;
             }
             if (d == 4){
-                math.b1 = q1;
-                math.b2 = q2;
-                math.b3 = q3;
-                math.b4 = q4;
-                math.z1 = c1;
-                math.z2 = c2;
-                math.z3 = c3;
-                math.z4 = c4;
+                Matematika.b1 = q1;
+                Matematika.b2 = q2;
+                Matematika.b3 = q3;
+                Matematika.b4 = q4;
+                Matematika.z1 = c1;
+                Matematika.z2 = c2;
+                Matematika.z3 = c3;
+                Matematika.z4 = c4;
             }
-        }
-        if (math.check == 1){
-            math.check = 0;
-            o = math.z;
-            ot = math.chel;
-            ho = math.hod;
-            d=math.d;
-            if (d == 2){
-                q1 = math.b1;
-                q2 = math.b2;
-                c1 = math.z1;
-                c2 = math.z2;
-            }
-            if (d == 3){
-                q1 = math.b1;
-                q2 = math.b2;
-                q3 = math.b3;
-                c1 = math.z1;
-                c2 = math.z2;
-                c3 = math.z3;
-            }
-            if (d == 4){
-                q1 = math.b1;
-                q2 = math.b2;
-                q3 = math.b3;
-                q4 = math.b4;
-                c1 = math.z1;
-                c2 = math.z2;
-                c3 = math.z3;
-                c4 = math.z4;
-            }
-        }
         if (c1 == 1){vc1="+";}if (c1 == 2){vc1="-";}if (c1 == 3){vc1="*";}if (c1 == 4){vc1="/";}
         if (c2 == 1){vc2="+";}if (c2 == 2){vc2="-";}if (c2 == 3){vc2="*";}if (c2 == 4){vc2="/";}
         if (c3 == 1){vc3="+";}if (c3 == 2){vc3="-";}if (c3 == 3){vc3="*";}if (c3 == 4){vc3="/";}
@@ -243,17 +228,17 @@ public class kalc extends AppCompatActivity {
                 tek.setText(String.format("%s",o));
                 if (o==ot){
                     hod.setText(String.format("%s", v));
-                    math.check=0;
-                    math.bal=math.bal+1;
+                    Matematika.bal= Matematika.bal+1;
                     v1.setVisibility(View.GONE);
                     v2.setVisibility(View.GONE);
                     v3.setVisibility(View.GONE);
                     v4.setVisibility(View.GONE);
                     re.setVisibility(View.VISIBLE);
-                    b.setText(String.format("%s %s",c,math.bal));
+                    b.setText(String.format("%s %s",c, Matematika.bal));
                 }
                 if (ho<1  && o!=ot){
                     pe.setVisibility(View.VISIBLE);
+                    otvet.setVisibility(View.VISIBLE);
                     v1.setVisibility(View.GONE);
                     v2.setVisibility(View.GONE);
                     v3.setVisibility(View.GONE);
@@ -283,17 +268,17 @@ public class kalc extends AppCompatActivity {
                 tek.setText(String.format("%s",o));
                 if (o==ot){
                     hod.setText(String.format("%s", v));
-                    math.check = 0;
-                    math.bal=math.bal+1;
+                    Matematika.bal= Matematika.bal+1;
                     v1.setVisibility(View.GONE);
                     v2.setVisibility(View.GONE);
                     v3.setVisibility(View.GONE);
                     v4.setVisibility(View.GONE);
                     re.setVisibility(View.VISIBLE);
-                    b.setText(String.format("%s %s",c,math.bal));
+                    b.setText(String.format("%s %s",c, Matematika.bal));
                 }
                 if (ho<1  && o!=ot){
                     pe.setVisibility(View.VISIBLE);
+                    otvet.setVisibility(View.VISIBLE);
                     v1.setVisibility(View.GONE);
                     v2.setVisibility(View.GONE);
                     v3.setVisibility(View.GONE);
@@ -323,17 +308,17 @@ public class kalc extends AppCompatActivity {
                 tek.setText(String.format("%s",o));
                 if (o==ot){
                     hod.setText(String.format("%s", v));
-                    math.check=0;
-                    math.bal=math.bal+1;
+                    Matematika.bal= Matematika.bal+1;
                     v1.setVisibility(View.GONE);
                     v2.setVisibility(View.GONE);
                     v3.setVisibility(View.GONE);
                     v4.setVisibility(View.GONE);
                     re.setVisibility(View.VISIBLE);
-                    b.setText(String.format("%s %s",c,math.bal));
+                    b.setText(String.format("%s %s",c, Matematika.bal));
                 }
                 if (ho<1  && o!=ot){
                     pe.setVisibility(View.VISIBLE);
+                    otvet.setVisibility(View.VISIBLE);
                     v1.setVisibility(View.GONE);
                     v2.setVisibility(View.GONE);
                     v3.setVisibility(View.GONE);
@@ -363,17 +348,17 @@ public class kalc extends AppCompatActivity {
                 tek.setText(String.format("%s",o));
                 if (o==ot){
                     hod.setText(String.format("%s", v));
-                    math.check=0;
-                    math.bal=math.bal+1;
+                    Matematika.bal= Matematika.bal+1;
                     v1.setVisibility(View.GONE);
                     v2.setVisibility(View.GONE);
                     v3.setVisibility(View.GONE);
                     v4.setVisibility(View.GONE);
                     re.setVisibility(View.VISIBLE);
-                    b.setText(String.format("%s %s",c,math.bal));
+                    b.setText(String.format("%s %s",c, Matematika.bal));
                 }
                 if (ho<1 && o!=ot){
                     pe.setVisibility(View.VISIBLE);
+                    otvet.setVisibility(View.VISIBLE);
                     v1.setVisibility(View.GONE);
                     v2.setVisibility(View.GONE);
                     v3.setVisibility(View.GONE);
@@ -385,48 +370,62 @@ public class kalc extends AppCompatActivity {
         re.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Matematika.log = "";
                 Intent i;
                 i = new Intent(getApplicationContext(), kalc.class);
                 startActivity(i);
             }
         });
 
+        otvet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("answer", "test");
+                re.setVisibility(View.VISIBLE);
+                otvet.setVisibility(View.GONE);
+                pe.setVisibility(View.GONE);
+                String oo = "=";
+                tek.setText(String.format("%s %s %s %s", Matematika.chel, oo, Matematika.z,Matematika.log));
+            }
+        });
+
         pe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                o = math.z;
-                ot = math.chel;
-                ho = math.hod;
-                d=math.d;
+                o = Matematika.z;
+                ot = Matematika.chel;
+                ho = Matematika.hod;
+                d= Matematika.d;
                 pe.setVisibility(View.GONE);
+                otvet.setVisibility(View.GONE);
                 if (d == 2){
-                    q1 = math.b1;
-                    q2 = math.b2;
-                    c1 = math.z1;
-                    c2 = math.z2;
+                    q1 = Matematika.b1;
+                    q2 = Matematika.b2;
+                    c1 = Matematika.z1;
+                    c2 = Matematika.z2;
                     v1.setVisibility(View.VISIBLE);
                     v2.setVisibility(View.VISIBLE);
                 }
                 if (d == 3){
-                    q1 = math.b1;
-                    q2 = math.b2;
-                    q3 = math.b3;
-                    c1 = math.z1;
-                    c2 = math.z2;
-                    c3 = math.z3;
+                    q1 = Matematika.b1;
+                    q2 = Matematika.b2;
+                    q3 = Matematika.b3;
+                    c1 = Matematika.z1;
+                    c2 = Matematika.z2;
+                    c3 = Matematika.z3;
                     v1.setVisibility(View.VISIBLE);
                     v2.setVisibility(View.VISIBLE);
                     v3.setVisibility(View.VISIBLE);
                 }
                 if (d == 4){
-                    q1 = math.b1;
-                    q2 = math.b2;
-                    q3 = math.b3;
-                    q4 = math.b4;
-                    c1 = math.z1;
-                    c2 = math.z2;
-                    c3 = math.z3;
-                    c4 = math.z4;
+                    q1 = Matematika.b1;
+                    q2 = Matematika.b2;
+                    q3 = Matematika.b3;
+                    q4 = Matematika.b4;
+                    c1 = Matematika.z1;
+                    c2 = Matematika.z2;
+                    c3 = Matematika.z3;
+                    c4 = Matematika.z4;
                     v1.setVisibility(View.VISIBLE);
                     v2.setVisibility(View.VISIBLE);
                     v3.setVisibility(View.VISIBLE);

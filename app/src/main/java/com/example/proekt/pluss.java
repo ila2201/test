@@ -35,7 +35,7 @@ public class pluss extends AppCompatActivity {
         Button v2 = (Button) findViewById(R.id.v2);
         Button v3 = (Button) findViewById(R.id.v3);
         Button v4 = (Button) findViewById(R.id.v4);
-        tim.setText(String.format("%s %s",c,math.bal));
+        tim.setText(String.format("%s %s",c, Matematika.bal));
         int k = r.nextInt(4)+1;
         int va1 = 0;
         int va2 = 0;
@@ -76,12 +76,12 @@ public class pluss extends AppCompatActivity {
             public void onClick(View view) {
                 if (finalVa == i1+i){
                     gl.setText("ВЕРНО!");
-                    math.bal=math.bal+1;
-                    tim.setText(String.format("%s %s",c,math.bal));
+                    Matematika.bal= Matematika.bal+1;
+                    tim.setText(String.format("%s %s",c, Matematika.bal));
                 }
                 else{
                     gl.setText("ОШИБКА!");
-                    math.resho=math.resho+1;
+                    Matematika.resho= Matematika.resho+1;
                 }
                 gl.setTextSize(59);
                 tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
@@ -100,12 +100,12 @@ public class pluss extends AppCompatActivity {
             public void onClick(View view) {
                 if (finalVa1 == i1+i){
                     gl.setText("ВЕРНО!");
-                    math.bal=math.bal+1;
-                    tim.setText(String.format("%s %s",c,math.bal));
+                    Matematika.bal= Matematika.bal+1;
+                    tim.setText(String.format("%s %s",c, Matematika.bal));
                 }
                 else{
                     gl.setText("ОШИБКА!");
-                    math.resho=math.resho+1;
+                    Matematika.resho= Matematika.resho+1;
                 }
                 gl.setTextSize(59);
                 tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
@@ -124,12 +124,12 @@ public class pluss extends AppCompatActivity {
             public void onClick(View view) {
                 if (finalVa2 == i1+i){
                     gl.setText("ВЕРНО!");
-                    math.bal=math.bal+1;
-                    tim.setText(String.format("%s %s",c,math.bal));
+                    Matematika.bal= Matematika.bal+1;
+                    tim.setText(String.format("%s %s",c, Matematika.bal));
                 }
                 else{
                     gl.setText("ОШИБКА!");
-                    math.resho=math.resho+1;
+                    Matematika.resho= Matematika.resho+1;
                 }
                 gl.setTextSize(59);
                 tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
@@ -148,12 +148,12 @@ public class pluss extends AppCompatActivity {
             public void onClick(View view) {
                 if (finalVa3 == i1+i){
                     gl.setText("ВЕРНО!");
-                    math.bal=math.bal+1;
-                    tim.setText(String.format("%s %s",c,math.bal));
+                    Matematika.bal= Matematika.bal+1;
+                    tim.setText(String.format("%s %s",c, Matematika.bal));
                 }
                 else{
                     gl.setText("ОШИБКА!");
-                    math.resho=math.resho+1;
+                    Matematika.resho= Matematika.resho+1;
                 }
                 gl.setTextSize(59);
                 tv.setText(String.format("%s %s %s %s %S", i, a, i1, b, ot));
@@ -176,13 +176,13 @@ public class pluss extends AppCompatActivity {
         });
     }
     public void onChronometerTickHandler()  {
-        if(math.time < 1) {
+        if(Matematika.time < 1) {
             Intent i;
             i = new Intent(getApplicationContext(), plusitog.class);
             startActivity(i);
         }
-        this.chronometerCountDown.setText(String.format("%s %s",d,math.time));
-        math.time--;
+        this.chronometerCountDown.setText(String.format("%s %s",d, Matematika.time));
+        Matematika.time--;
     }
 
 

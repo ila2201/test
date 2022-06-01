@@ -49,7 +49,7 @@
             android:name=".chislo"
             android:exported="false" />
         <activity
-            android:name=".math"
+            android:name=".Matematika"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

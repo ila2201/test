@@ -8,11 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class math extends AppCompatActivity {
+public class Matematika extends AppCompatActivity {
     public static int bal = 0;
     public static int time = 60;
     public static int resho = 0;
-    public static int check = 0;
     public static int chel = 0;
     public static int hod = 0;
     public  static  int z = 0;
@@ -25,6 +24,7 @@ public class math extends AppCompatActivity {
     public static int z3 = 0;
     public static int z4 = 0;
     public  static  int d = 0;
+    public  static String log = "";
 
 
     @Override
