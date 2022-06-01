@@ -40,7 +40,7 @@ public class kalc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kalc);
         Random r = new Random();
-        d = 4;
+        d = r.nextInt(4)+2;
         ho = r.nextInt(4)+2;
         ot = r.nextInt(100)-50;
         o = ot;

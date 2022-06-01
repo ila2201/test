@@ -12,7 +12,8 @@ public class plusitog extends AppCompatActivity {
     String a = "Процент: ";
     Double q = Double.valueOf(Matematika.bal);
     Double w = Double.valueOf(Matematika.resho);
-    Double c = q/(w+q);
+    Double c = q/(w+q)*100;
+    String z = "%";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,7 @@ public class plusitog extends AppCompatActivity {
         TextView per = (TextView) findViewById(R.id.per);
         itog.setText(String.format("%s", Matematika.bal));
         osh.setText(String.format("%s", Matematika.resho));
-        per.setText(String.format("%s %.2f",a, c));
+        per.setText(String.format("%s %.0f %s",a, c,z));
         Matematika.bal=0;
         Matematika.time=60;
         Matematika.resho=0;
