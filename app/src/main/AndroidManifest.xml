@@ -49,9 +49,6 @@
             android:name=".plus"
             android:exported="false" />
         <activity
-            android:name=".chislo"
-            android:exported="false" />
-        <activity
             android:name=".Matematika"
             android:exported="false" />
         <activity

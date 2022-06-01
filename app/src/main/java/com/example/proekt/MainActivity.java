@@ -14,16 +14,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        Button buttonch = (Button)findViewById(R.id.buttonch);
-        buttonch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i;
-                i = new Intent(getApplicationContext(), chislo.class);
-                startActivity(i);
-            }
-        });
         Button buttonma = (Button)findViewById(R.id.buttonma);
         buttonma.setOnClickListener(new View.OnClickListener() {
             @Override
