@@ -41,7 +41,7 @@ public class kalc extends AppCompatActivity {
         setContentView(R.layout.activity_kalc);
         Random r = new Random();
         d = r.nextInt(4)+2;
-        ho = r.nextInt(4)+2;
+        ho = r.nextInt(3)+2;
         ot = r.nextInt(100)-50;
         o = ot;
         int h = ho;
@@ -60,15 +60,15 @@ public class kalc extends AppCompatActivity {
         Button v4 = (Button) findViewById(R.id.v4);
         Button re = (Button) findViewById(R.id.rest);
         Button pe = (Button) findViewById(R.id.pop);
-        Button otvet = (Button) findViewById(R.id.otvet);
         Button exit = (Button) findViewById(R.id.exit);
+        Button otvet = (Button) findViewById(R.id.otvet);
         otvet.setVisibility(View.GONE);
         pe.setVisibility(View.GONE);
         re.setVisibility(View.GONE);
-        q1 = r.nextInt(10)+1;
-        q2 = r.nextInt(10)+1;
-        q3 = r.nextInt(10)+1;
-        q4 = r.nextInt(10)+1;
+        q1 = r.nextInt(9)+1;
+        q2 = r.nextInt(9)+1;
+        q3 = r.nextInt(9)+1;
+        q4 = r.nextInt(9)+1;
         int e = 0;
         while (h>0){
             if (d==2){
@@ -83,118 +83,70 @@ public class kalc extends AppCompatActivity {
             if (c1 == 1 && e ==1){
                 o=o-q1;
                 Matematika.log= Matematika.log + "+" + String.format("%s",q1);
-                h-=1;
             }
             if (c1 == 2 && e ==1){
                 o=o+q1;
                 Matematika.log= Matematika.log + "-" + String.format("%s",q1);
-                h-=1;
             }
             if (c1 == 3 && e ==1){
-                if (o%q1==0){
-                    o=o/q1;
-                    Matematika.log= Matematika.log + "*" + String.format("%s",q1);
-                    h-=1;}
-                else{
-                    c1 = r.nextInt(2)+1;
-                }
+                o=o/q1;
+                Matematika.log= Matematika.log + "*" + String.format("%s",q1);
             }
             if (c1 == 4 && e ==1){
-                if ((o*q1)%q1==0){
-                    o=o*q1;
-                    Matematika.log= Matematika.log + "/" + String.format("%s",q1);
-                    h-=1;}
-                else{
-                    c1 = r.nextInt(2)+1;
-                }
+                o=o*q1;
+                Matematika.log= Matematika.log + "/" + String.format("%s",q1);
             }
             if (c2 == 1 && e ==2){
                 o=o-q2;
                 Matematika.log= Matematika.log + "+" + String.format("%s",q2);
-                h-=1;
             }
             if (c2 == 2 && e ==2){
                 o=o+q2;
                 Matematika.log= Matematika.log + "-" + String.format("%s",q2);
-                h-=1;
             }
             if (c2 == 3 && e ==2){
-                if (o%q2==0){
-                    o=o/q2;
-                    Matematika.log= Matematika.log + "*" + String.format("%s",q2);
-                    h-=1;}
-                else{
-                    c2 = r.nextInt(2)+1;
-                }
+                o=o/q2;
+                Matematika.log= Matematika.log + "*" + String.format("%s",q2);
             }
             if (c2 == 4 && e ==2){
-                if ((o*q2)%q2==0){
-                    o=o*q2;
-                    Matematika.log= Matematika.log + "/" + String.format("%s",q2);
-                    h-=1;}
-                else{
-                    c2 = r.nextInt(2)+1;
-                }
+                o=o*q2;
+                Matematika.log= Matematika.log + "/" + String.format("%s",q2);
             }
             if (c3 == 1 && e ==3){
                 o=o-q3;
                 Matematika.log= Matematika.log + "+" + String.format("%s",q3);
-                h-=1;
             }
             if (c3 == 2 && e ==3){
                 o=o+q3;
                 Matematika.log= Matematika.log + "-" + String.format("%s",q3);
-                h-=1;
             }
             if (c3 == 3 && e ==3){
-                if (o%q3==0){
-                    o=o/q3;
-                    Matematika.log= Matematika.log + "*" + String.format("%s",q3);
-                    h-=1;}
-                else{
-                    c3 = r.nextInt(2)+1;
-                }
+                o=o/q3;
+                Matematika.log= Matematika.log + "*" + String.format("%s",q3);
             }
             if (c3 == 4 && e ==3){
-                if ((o*q3)%q3==0){
-                    o=o*q3;
-                    Matematika.log= Matematika.log + "/" + String.format("%s",q3);
-                    h-=1;}
-                else{
-                    c3 = r.nextInt(2)+1;
-                }
+                o=o*q3;
+                Matematika.log= Matematika.log + "/" + String.format("%s",q3);
             }
             if (c4 == 1 && e ==4){
                 o=o-q4;
                 Matematika.log= Matematika.log + "+" + String.format("%s",q4);
-                h-=1;
             }
             if (c4 == 2 && e ==4){
                 o=o+q4;
                 Matematika.log= Matematika.log + "-" + String.format("%s",q4);
-                h-=1;
             }
             if (c4 == 3 && e ==4){
-                if (o%q4==0){
-                    o=o/q4;
-                    Matematika.log= Matematika.log + "*" + String.format("%s",q4);
-                    h-=1;}
-                else{
-                    c4 = r.nextInt(2)+1;
-                }
+                o=o/q4;
+                Matematika.log= Matematika.log + "*" + String.format("%s",q4);
             }
             if (c4 == 4 && e ==4){
-                if ((o*q4)%q4==0){
-                    o=o*q4;
-                    Matematika.log= Matematika.log + "/" + String.format("%s",q4);
-                    h-=1;}
-                else{
-                    c4 = r.nextInt(2)+1;
-                }
+                o=o*q4;
+                Matematika.log= Matematika.log + "/" + String.format("%s",q4);
             }
-         h-=1;
+            h-=1;
         }
-        if (o<1 || o==ot){
+        if (o==0 || o==ot){
             Matematika.log = "";
             Intent i;
             i = new Intent(getApplicationContext(), kalc.class);
@@ -425,6 +377,15 @@ public class kalc extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Matematika.log = "";
+                Intent i;
+                i = new Intent(getApplicationContext(), kalcitog.class);
+                startActivity(i);
+            }
+        });
 
         otvet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -435,14 +396,6 @@ public class kalc extends AppCompatActivity {
                 pe.setVisibility(View.GONE);
                 String oo = "=";
                 tek.setText(String.format("%s %s %s %s", Matematika.chel, oo, Matematika.z,Matematika.log));
-            }
-        });
-        exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i;
-                i = new Intent(getApplicationContext(), kalcitog.class);
-                startActivity(i);
             }
         });
 
